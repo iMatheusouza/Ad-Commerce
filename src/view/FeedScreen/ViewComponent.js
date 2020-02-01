@@ -1,18 +1,55 @@
 import React, { Component } from 'react';
 import {View, Text} from 'react-native'
+import {
+  MainContainer,
+  ItemLabel,
+  ItemImage,
+  ItemTitle,
+  ItemPriceRent,
+  ItemPremium,
+  ItemDescription,
+  ItemType,
+  ItemLocalization,
+  ItemPriceContainer
+} from './styles'
 
 
-const ViewComponent = ({title, value}) => {
+const ViewComponent = ({
+  title, 
+  price, 
+  imageSource,
+  itemId
+}) => {
     return(
-      <View style={{backgroundColor: 'palevioletred', flex: 1,
-       marginVertical: 8}}>
-        <Text style={{color: 'white'}}>
-          {title}
-        </Text>
-        <Text style={{fontSize: 12, color: 'white'}}>
-          {value}
-        </Text>
-      </View>
+      <MainContainer>
+        <ItemLabel>
+          <ItemImage
+            source={{uri: imageSource}}
+            resizeMode={'cover'}
+          />
+          <ItemDescription>
+            <ItemType>
+              Apartamento
+            </ItemType>
+            <ItemLocalization>
+              Localização:
+            </ItemLocalization>
+            <ItemTitle>
+              {title}
+            </ItemTitle>
+            <ItemPriceContainer>
+              <ItemPriceRent>
+                {price}
+              </ItemPriceRent>
+              <ItemPremium>
+                {itemId % 2 == 0 ? 'Premium' : 'Regular'}
+              </ItemPremium>
+            </ItemPriceContainer>
+            
+          </ItemDescription>
+          
+        </ItemLabel>
+      </MainContainer>
     )
 }
 
