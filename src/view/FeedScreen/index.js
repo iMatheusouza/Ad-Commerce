@@ -1,49 +1,37 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, FlatList, View } from 'react-native';
-import rentals from './api.json'
+import { FlatList } from 'react-native';
 import ViewComponent from './ViewComponent.js';
+import axios from 'axios';
 
  class FeedScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [
-        {
-          name: 'jhon',
-          tel: '99999'
-        },
-        {
-          name: 'jooj',
-          tel: '5555'
-        },
-        {
-          name: 'jeej',
-          tel: '3333'
-        },
-        {
-          name: 'joji',
-          tel: '11111'
-        }
-      ]
+      rentals: []
     };
+  }
+
+  componentDidMount () {
+    axios.get('https://my-json-server.typicode.com/eduardobvale/demo/rentals')
+    .then(res => {
+      const rentals = res.data
+      this.setState({rentals})
+    })
   }
 
   render() {
     return (
-      <View>
-        <Text>
-          Anúncios
-        </Text>
         <FlatList
-          data={rentals}
+          data={this.state.rentals}
           renderItem={({index, item}) =>(
             <ViewComponent
-            title={item.title}
-            value={item.value}
+              title={item.title}
+              price={'$'+ item.value}
+              imageSource={item.image}
+              itemId={item.id}
             />
           )}
         />
-      </View>
     );
   }
 }
