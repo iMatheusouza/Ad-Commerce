@@ -23,6 +23,10 @@ import axios from 'axios';
     this.props.navigation.navigate('ProductDetails')
   }
 
+  static navigationOptions = {
+    title: 'Sétimo Andar'
+  }
+
   render() {
     return (
         <FlatList

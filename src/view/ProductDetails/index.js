@@ -9,6 +9,10 @@ import ViewComponent from '../ProductDetails/ViewComponent';
     };
   }
 
+  static navigationOptions = {
+    title: 'Anúncio'
+  }
+
   render() {
     return (
       <ViewComponent/>
