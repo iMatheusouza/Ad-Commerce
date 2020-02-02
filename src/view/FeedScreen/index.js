@@ -19,16 +19,22 @@ import axios from 'axios';
     })
   }
 
+  navigateToProduct = () => {
+    this.props.navigation.navigate('ProductDetails')
+  }
+
   render() {
     return (
         <FlatList
           data={this.state.rentals}
+          keyExtractor={(item) => item.id}
           renderItem={({index, item}) =>(
             <ViewComponent
               title={item.title}
               price={'$'+ item.value}
               imageSource={item.image}
               itemId={item.id}
+              navigateToProduct={this.navigateToProduct}
             />
           )}
         />

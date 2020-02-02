@@ -6,7 +6,7 @@ export const MainContainer = styled.View`
   padding-left: 24px; 
 ` 
 
-export const ItemLabel = styled.View`
+export const ItemLabel = styled.TouchableOpacity`
 background: #f5f5f5;
   elevation: 20;
   margin: 8px 0px;

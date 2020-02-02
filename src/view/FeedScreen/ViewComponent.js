@@ -18,11 +18,14 @@ const ViewComponent = ({
   title, 
   price, 
   imageSource,
-  itemId
+  itemId,
+  navigateToProduct
 }) => {
     return(
       <MainContainer>
-        <ItemLabel>
+        <ItemLabel
+          onPress={navigateToProduct}
+        >
           <ItemImage
             source={{uri: imageSource}}
             resizeMode={'cover'}
