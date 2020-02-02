@@ -28,7 +28,7 @@ import axios from 'axios';
         <FlatList
           data={this.state.rentals}
           keyExtractor={(item) => item.id}
-          renderItem={({index, item}) =>(
+          renderItem={({item}) =>(
             <ViewComponent
               title={item.title}
               price={'$'+ item.value}

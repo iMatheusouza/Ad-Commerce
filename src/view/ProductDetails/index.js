@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import ViewComponent from '../ProductDetails/ViewComponent';
 
  class ProductDetails extends Component {
   constructor(props) {
@@ -10,9 +11,7 @@ import { View, Text } from 'react-native';
 
   render() {
     return (
-      <View style={{justifyContent: 'center', flex: 1}}>
-        <Text> Hello from Product details </Text>
-      </View>
+      <ViewComponent/>
     );
   }
 }
