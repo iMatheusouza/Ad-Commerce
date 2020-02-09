@@ -24,7 +24,6 @@ export const ForRentText = styled.Text`
 ` 
 
 export const TitleText = styled.Text`
-  color: rgb(117, 117, 117);
   font-size: 16px;
   margin-bottom: 4px;
 `
@@ -42,8 +41,8 @@ export const PricesLabel = styled.View`
 `
 
 export const Prices = styled.Text`
- font-size: ${props => props.minorImportant ? '14px' : '16px'};
- color: ${props => props.minorImportant ? 'rgb(117, 117, 117)' : 'black'};
+ font-size: ${props => props.mostImportant ? '16px' : '14px'};
+ color: ${props => props.mostImportant ? 'green' : 'rgb(117, 117, 117)'};
 ` 
 
 export const Footer = styled.View`

@@ -44,31 +44,31 @@ const ViewComponent = ({
               Aluguel
             </Prices>
             <Prices>
-              $xxx.xx
+              $xx.xx
             </Prices>
           </PricesLabel>
           <PricesLabel>
-            <Prices  minorImportant={true}>
+            <Prices >
               IPTU
             </Prices>
-            <Prices  minorImportant={true}>
-              $xxx.xx
+            <Prices >
+              $xx.xx
             </Prices>
           </PricesLabel>
           <PricesLabel>
-            <Prices  minorImportant={true}>
+            <Prices >
               Condomínio
             </Prices>
-            <Prices  minorImportant={true}>
-              $xxx.xx
+            <Prices >
+              $xx.xx
             </Prices>
           </PricesLabel>
           <PricesLabel>
-            <Prices>
+            <Prices mostImportant={true}>
               Total
             </Prices>
-            <Prices>
-              {product.value}
+            <Prices mostImportant={true}>
+              {'$' + product.value}
             </Prices>
           </PricesLabel>
         </PricesContainer>

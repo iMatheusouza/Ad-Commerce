@@ -43,6 +43,7 @@ import { connect } from 'react-redux'
     title: 'Sétimo Andar'
   }
 
+ 
   render() {
     return (
         <FlatList

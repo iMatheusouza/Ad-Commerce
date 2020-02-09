@@ -16,7 +16,6 @@ import ViewComponent from '../ProductDetails/ViewComponent';
 
   render() {
     const data = this.props.navigation.getParam('data')
-    // console.log(this.props.rentals[data])
     return (
       <ViewComponent
         product={this.props.rentals[data]}
