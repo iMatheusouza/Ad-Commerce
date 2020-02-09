@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import FeedScreen from './view/FeedScreen'
+import { Provider } from 'react-redux'
 import Router from './routes'
+import store from './store/index'
 
 class Index extends Component {
   render() {
     return (
-      <Router/>
+      <Provider store={store}>
+        <Router/>
+      </Provider>
     );
   }
 }

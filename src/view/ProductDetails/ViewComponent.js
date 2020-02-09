@@ -17,11 +17,13 @@ import {
 } from './styles'
 
 
-const ViewComponent = () => {
+const ViewComponent = ({
+  product
+}) => {
   return(
     <MainContainer>
       <ProductImage
-        source={{uri: 'https://source.unsplash.com/AQl-J19ocWE/100'}}
+        source={{uri: product.image}}
       />
       <DescriptionContainer>
         <TitleContainer>
@@ -29,7 +31,7 @@ const ViewComponent = () => {
             Apartamento para alugar em:
           </ForRentText>
           <TitleText>
-            Título do produto
+            {product.title}
           </TitleText>
           <PublishedAgo>
             Publicado há 2 meses
@@ -41,7 +43,7 @@ const ViewComponent = () => {
             <Prices >
               Aluguel
             </Prices>
-            <Prices >
+            <Prices>
               $xxx.xx
             </Prices>
           </PricesLabel>
@@ -66,7 +68,7 @@ const ViewComponent = () => {
               Total
             </Prices>
             <Prices>
-              (Preço total do produto)
+              {product.value}
             </Prices>
           </PricesLabel>
         </PricesContainer>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { connect } from 'react-redux'
 import ViewComponent from '../ProductDetails/ViewComponent';
 
  class ProductDetails extends Component {
@@ -13,11 +13,22 @@ import ViewComponent from '../ProductDetails/ViewComponent';
     title: 'Anúncio'
   }
 
+
   render() {
+    const data = this.props.navigation.getParam('data')
+    // console.log(this.props.rentals[data])
     return (
-      <ViewComponent/>
+      <ViewComponent
+        product={this.props.rentals[data]}
+      />
     );
   }
 }
 
-export default ProductDetails
+function mapStateToProps(state) {
+  return {
+    rentals: state.data
+  }
+}
+
+export default connect(mapStateToProps)(ProductDetails)
