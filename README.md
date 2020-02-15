@@ -1,6 +1,6 @@
 # Sétimo Andar
   O sétimo andar é um aplicativo em React Native que consiste em mostrar anúncios de imóveis
-que vem da _API: https://my-json-server.typicode.com/eduardobvale/demo/rentals_
+consumindo a seguinte _API: https://my-json-server.typicode.com/eduardobvale/demo/rentals_
 
 ## Tecnologias Usadas
 ### Axios
