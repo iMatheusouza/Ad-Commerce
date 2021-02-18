@@ -11,7 +11,7 @@ desenvolver meus conhecimentos em front-end com React Native
   Usado para fazer o request e trazer os dados da API.
   
 ### Redux
-  Usado para passar os dados de uma tela para outra, dependendo do anúncio que o usuário clicou.
+  Usado para globalizar os dados da aplicação, e mostra-los em determinadas telas quandon necessário.
   
 ### Styled Components
   Para o estilo e organização dos componentes.
