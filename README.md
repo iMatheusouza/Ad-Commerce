@@ -8,7 +8,7 @@ desenvolver meus conhecimentos em front-end com React Native
 
 ## Tecnologias Usadas
 
-###React Native
+### React Native
   Para a construção de interfaces nativas para o mobile.
   
 #### Axios
