@@ -7,12 +7,16 @@ consumindo a seguinte _API: https://my-json-server.typicode.com/eduardobvale/dem
 desenvolver meus conhecimentos em front-end com React Native
 
 ## Tecnologias Usadas
-### Axios
+
+###React Native
+  Para a construção de interfaces nativas para o mobile.
+  
+#### Axios
   Usado para fazer o request e trazer os dados da API.
   
-### Redux
+#### Redux
   Usado para globalizar os dados da aplicação, e mostra-los em determinadas telas quandon necessário.
   
-### Styled Components
+#### Styled Components
   Para o estilo e organização dos componentes.
 
